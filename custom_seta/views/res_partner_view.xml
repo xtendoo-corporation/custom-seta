@@ -11,6 +11,25 @@
                         <field name="birth_date" class="oe_inline"/>
                         <field name="birth_place" class="oe_inline"/>
                         <field name="ss_number" class="oe_inline"/>
+                        <field name="brethren_number" class="oe_inline"/>
+
+                        <field name="father_name" class="oe_inline"/>
+                        <field name="father_age" class="oe_inline"/>
+                        <field name="father_profession" class="oe_inline"/>
+                        <field name="father_company" class="oe_inline"/>
+
+                        <field name="mother_name" class="oe_inline"/>
+                        <field name="mother_age" class="oe_inline"/>
+                        <field name="mother_profession" class="oe_inline"/>
+                        <field name="mother_company" class="oe_inline"/>
+
+                        <field name="home_phone" class="oe_inline"/>
+                        <field name="father_phone" class="oe_inline"/>
+                        <field name="father_company_phone" class="oe_inline"/>
+                        <field name="mother_phone" class="oe_inline"/>
+                        <field name="mother_company_phone" class="oe_inline"/>
+                        <field name="other_phone" class="oe_inline"/>
+
                     </group>
                 </page>
             </xpath>

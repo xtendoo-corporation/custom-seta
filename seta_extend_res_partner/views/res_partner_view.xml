@@ -18,11 +18,19 @@
                     </group>
                     <group name="brothers_data">
                         <field name="brothers_number" class="oe_inline"/>
-                        <field name="contact_type"/>
-
                     </group>
                 </group>
             </xpath>
+
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[2]/field[@name='mobile']"
+                   position="before">
+                    <field name="company"/>
+                    <field name="profession"/>
+                    <field name="company_phone"/>
+                    <field name="birth_date_contact"/>
+            </xpath>
+
 
             <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]"
                    position="before">
@@ -31,6 +39,11 @@
                 </group>
             </xpath>
 
+
+
+
+
+            <!--
             <xpath expr="//page[@name='internal_notes']" position="after">
                 <page name="family_information" string="Family information">
 
@@ -58,6 +71,7 @@
                     </group>
                 </page>
             </xpath>
+            -->
         </field>
     </record>
 </odoo>

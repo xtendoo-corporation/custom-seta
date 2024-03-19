@@ -26,9 +26,6 @@ class ResPartner(models.Model):
     birth_date_contact = fields.Date(
         string="Birth date",
     )
-    profession = fields.Char(
-        string="Profession",
-    )
     company = fields.Char(
         string="Company",
     )

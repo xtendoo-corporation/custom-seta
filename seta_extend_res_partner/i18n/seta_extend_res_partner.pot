@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 11:09+0000\n"
-"PO-Revision-Date: 2024-03-19 11:09+0000\n"
+"POT-Creation-Date: 2024-03-19 13:05+0000\n"
+"PO-Revision-Date: 2024-03-19 13:05+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,9 @@ msgstr ""
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__birth_date
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__birth_date_contact
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__birth_date
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__birth_date_contact
 msgid "Birth date"
 msgstr ""
 
@@ -34,6 +36,18 @@ msgid "Brothers number"
 msgstr ""
 
 #. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__company
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__company
+msgid "Company"
+msgstr ""
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__company_phone
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__company_phone
+msgid "Company phone"
+msgstr ""
+
+#. module: seta_extend_res_partner
 #: model:ir.model,name:seta_extend_res_partner.model_res_partner
 msgid "Contact"
 msgstr ""
@@ -45,59 +59,8 @@ msgid "Contact type"
 msgstr ""
 
 #. module: seta_extend_res_partner
-#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.res_partner_view_seta_foundation
-msgid "Extra data"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.res_partner_view_seta_foundation
-msgid "Family information"
-msgstr ""
-
-#. module: seta_extend_res_partner
 #: model:ir.model.fields.selection,name:seta_extend_res_partner.selection__res_partner__contact_type__father
 msgid "Father"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__father_birth_date
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__father_birth_date
-msgid "Father birth date"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__father_company
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__father_company
-msgid "Father company"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__father_company_phone
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__father_company_phone
-msgid "Father company phone"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.res_partner_view_seta_foundation
-msgid "Father data"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__father_name
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__father_name
-msgid "Father name"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__father_phone
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__father_phone
-msgid "Father phone"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__father_profession
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__father_profession
-msgid "Father profession"
 msgstr ""
 
 #. module: seta_extend_res_partner
@@ -112,55 +75,14 @@ msgid "Mother"
 msgstr ""
 
 #. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__mother_birth_date
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__mother_birth_date
-msgid "Mother birth date"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__mother_company
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__mother_company
-msgid "Mother company"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__mother_company_phone
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__mother_company_phone
-msgid "Mother company phone"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.res_partner_view_seta_foundation
-msgid "Mother data"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__mother_name
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__mother_name
-msgid "Mother name"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__mother_phone
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__mother_phone
-msgid "Mother phone"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__mother_profession
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__mother_profession
-msgid "Mother profession"
-msgstr ""
-
-#. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__other_phone
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__other_phone
-msgid "Other phone"
-msgstr ""
-
-#. module: seta_extend_res_partner
 #: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.res_partner_view_seta_foundation
 msgid "Personal data"
+msgstr ""
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__profession
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__profession
+msgid "Profession"
 msgstr ""
 
 #. module: seta_extend_res_partner
@@ -172,4 +94,10 @@ msgstr ""
 #. module: seta_extend_res_partner
 #: model:ir.model.fields.selection,name:seta_extend_res_partner.selection__res_partner__contact_type__tutor
 msgid "Tutor"
+msgstr ""
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__name
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__name
+msgid "name"
 msgstr ""

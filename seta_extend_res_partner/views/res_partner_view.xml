@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="res_partner_view_seta_foundation" model="ir.ui.view">
+        <field name="name">res.partner.view.seta.foundation</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='internal_notes']" position="after">
+                <page name="family_information" string="Family information">
+                    <group name="personal_data" string="Personal data">
+                        <field name="birth_date" class="oe_inline"/>
+                        <field name="birth_place" class="oe_inline"/>
+                        <field name="ss_number" class="oe_inline"/>
+                        <field name="brother_number" class="oe_inline"/>
+                    </group>
+
+                    <group name="father_data" string="Father data">
+                        <field name="father_name" class="oe_inline"/>
+                        <field name="father_birth_date" class="oe_inline"/>
+                        <field name="father_profession" class="oe_inline"/>
+                        <field name="father_company" class="oe_inline"/>
+                        <field name="father_phone" widget="phone" class="oe_inline"/>
+                        <field name="father_company_phone" widget="phone" class="oe_inline"/>
+                    </group>
+
+                    <group name="mother_data" string="Mother data">
+                        <field name="mother_name" class="oe_inline"/>
+                        <field name="mother_birth_date" class="oe_inline"/>
+                        <field name="mother_profession" class="oe_inline"/>
+                        <field name="mother_company" class="oe_inline"/>
+                        <field name="mother_phone" widget="phone" class="oe_inline"/>
+                        <field name="mother_company_phone" widget="phone" class="oe_inline"/>
+                    </group>
+
+                    <group name="extra_data" string="Extra data">
+                        <field name="home_phone" class="oe_inline"/>
+                        <field name="other_phone" class="oe_inline"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

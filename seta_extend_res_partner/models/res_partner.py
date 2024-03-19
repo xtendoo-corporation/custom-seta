@@ -62,3 +62,12 @@ class ResPartner(models.Model):
     other_phone = fields.Char(
         string="Other phone",
     )
+    contact_type = fields.Selection(
+        selection=[
+            ("father", "Father"),
+            ("mother", "Mother"),
+            ("tutor", "Tutor"),
+        ],
+        string="Contact type",
+        default="father",
+    )

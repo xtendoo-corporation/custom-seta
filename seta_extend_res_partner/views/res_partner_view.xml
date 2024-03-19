@@ -18,7 +18,16 @@
                     </group>
                     <group name="brothers_data">
                         <field name="brothers_number" class="oe_inline"/>
+                        <field name="contact_type"/>
+
                     </group>
+                </group>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]"
+                   position="before">
+                <group>
+                    <field name="contact_type"/>
                 </group>
             </xpath>
 

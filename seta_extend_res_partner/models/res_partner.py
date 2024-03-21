@@ -1,7 +1,9 @@
 # Copyright (C) 2024 Manuel Calero (<https://xtendoo.es>).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+import datetime
 
 from odoo import fields, models, api
+from datetime import date
 
 
 class ResPartner(models.Model):
@@ -22,9 +24,6 @@ class ResPartner(models.Model):
     )
     name = fields.Char(
         string="name",
-    )
-    birth_date_contact = fields.Date(
-        string="Birth date",
     )
     company = fields.Char(
         string="Company",
@@ -62,6 +61,25 @@ class ResPartner(models.Model):
         default="father",
         required=True,
     )
+
+    address = fields.Char(
+        string="Address"
+    )
+
+    age = fields.Integer(
+        string="Age",
+        compute="_calculate_age",
+        store=True,
+    )
+
+    @api.depends('birth_date')
+    def _calculate_age(self):
+        for record in self:
+            if record.birth_date:
+                record.age = int((date.today() - record.birth_date).days / 365)
+            else:
+                record.age = 0
+
     @api.model
     def default_get(self, fields):
         res = super().default_get(fields)

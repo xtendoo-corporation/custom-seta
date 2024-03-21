@@ -72,9 +72,10 @@
             <xpath
                 expr="//div[@class='oe_kanban_details']/field[@name='name']"
                 position="before">
-               <!-- <field name="contact_type" widget="badge" decoration-primary="true"/>-->
-
-                <field name="contact_type" class="o_tag_color_7 badge rounded-pill o_tag d-inline-flex align-items-center mw-100 o_tag_badge_text"/>
+                <!-- <field name="contact_type" widget="badge" decoration-primary="true"/>-->
+                <attribute class="o_tag_color_7 badge rounded-pill o_tag d-inline-flex align-items-center mw-100">
+                    <field name="contact_type" class="o_tag_badge_text"/>
+                </attribute>
                 <br/>
             </xpath>
 

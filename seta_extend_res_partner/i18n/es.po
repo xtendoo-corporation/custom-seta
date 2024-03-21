@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-19 13:04+0000\n"
-"PO-Revision-Date: 2024-03-19 13:04+0000\n"
+"POT-Creation-Date: 2024-03-21 09:47+0000\n"
+"PO-Revision-Date: 2024-03-21 09:47+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,10 +16,26 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__address
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__address
+msgid "Address"
+msgstr "Dirección"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__age
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__age
+msgid "Age"
+msgstr "Edad"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__allergies
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__allergies
+msgid "Allergies"
+msgstr "Alergias"
+
+#. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__birth_date
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__birth_date_contact
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__birth_date
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__birth_date_contact
 msgid "Birth date"
 msgstr "Fecha nacimiento"
 
@@ -56,12 +72,25 @@ msgstr "Contacto"
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__contact_type
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__contact_type
 msgid "Contact type"
-msgstr "Tipo de contacto"
+msgstr "Datos de contacto"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__discapacity
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__discapacity
+#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.res_partner_view_seta_foundation
+msgid "Discapacity"
+msgstr "Discapacidad"
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields.selection,name:seta_extend_res_partner.selection__res_partner__contact_type__father
 msgid "Father"
 msgstr "Padre"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__grade_of_discapacity
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__grade_of_discapacity
+msgid "Grade of discapacity"
+msgstr "Grado de discapacidad"
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__home_phone
@@ -75,26 +104,37 @@ msgid "Mother"
 msgstr "Madre"
 
 #. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__observations
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__observations
+msgid "Observations"
+msgstr "Observaciones"
+
+#. module: seta_extend_res_partner
 #: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.res_partner_view_seta_foundation
 msgid "Personal data"
 msgstr "Datos personales"
 
 #. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__profession
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__profession
-msgid "Profession"
-msgstr "Profesion"
-
-#. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__ss_number
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__ss_number
 msgid "S.S. number"
-msgstr "Numero de la seguridad social"
+msgstr "Numero de la Seguridad social"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__scholarships_and_grants
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__scholarships_and_grants
+msgid "Scholarships and grants"
+msgstr "Becas y ayudas"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields.selection,name:seta_extend_res_partner.selection__res_partner__contact_type__school
+msgid "School"
+msgstr "Colegio"
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields.selection,name:seta_extend_res_partner.selection__res_partner__contact_type__tutor
 msgid "Tutor"
-msgstr ""
+msgstr "Tutor"
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__name

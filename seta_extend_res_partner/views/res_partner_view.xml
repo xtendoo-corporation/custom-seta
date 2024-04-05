@@ -91,14 +91,6 @@
                 </group>
             </xpath>
 
-
-
-
-
-
-            <!--En la vista ¿kanban? mostrar la etiqueta de cotact_type-->
-
-
             <!--
             <xpath expr="//page[@name='internal_notes']" position="after">
                 <page name="family_information" string="Family information">

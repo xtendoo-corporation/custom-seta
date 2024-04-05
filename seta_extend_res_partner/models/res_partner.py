@@ -11,7 +11,7 @@ class ResPartner(models.Model):
 
     birth_date = fields.Date(
         string="Birth date",
-        required=True,
+        # required=True,
     )
     birth_place = fields.Char(
         string="Birth place",

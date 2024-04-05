@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<odoo>
+    <record model="ir.ui.view" id="res_partner_kanban_view">
+        <field name="name">res.partner.kanban</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//ul[1]/li[1]" position="before">
+                <field name="contact_type" class="badge rounded-pill bg-success bg-info text-dark"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

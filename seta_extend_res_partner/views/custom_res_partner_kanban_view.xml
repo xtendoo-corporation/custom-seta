@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <xpath expr="//ul[1]" position="before">
                 <field name="contact_type" class="badge rounded-pill bg-success bg-info text-white fw-bold fs-6"
-                       attrs="{'invisible': [('is_company', '=', True)]}"/>
+                       attrs="{'invisible': ['|',('is_company', '=', True),('contact_type', '=', ' ')]}"/>
             </xpath>
         </field>
     </record>

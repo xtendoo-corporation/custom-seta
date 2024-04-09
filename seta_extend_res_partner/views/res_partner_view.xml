@@ -45,15 +45,18 @@
             <xpath
                 expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[1]/field[@name='function']"
                 position="before">
-                <field name="address" class="oe_inline"/>
+                <field name="address" class="oe_inline" attrs="{'invisible': [('type', '!=', 'contact') ]}"/>
             </xpath>
 
             <xpath
                 expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[1]/field[@name='function']"
                 position="after">
-                <field name="company" attrs="{'invisible': [('contact_type','=','school')]}"/>
-                <field name="birth_date" attrs="{'invisible': [('contact_type','=','school')]}"/>
-                <field name="age" attrs="{'invisible': [('contact_type','=','school')]}"/>
+                <field name="company"
+                       attrs="{'invisible': ['|',('contact_type','=','school'),('type', '!=', 'contact')]}"/>
+                <field name="birth_date"
+                       attrs="{'invisible': ['|',('contact_type','=','school'),('type', '!=', 'contact')]}"/>
+                <field name="age"
+                       attrs="{'invisible': ['|',('contact_type','=','school'),('type', '!=', 'contact') ]}"/>
             </xpath>
 
             <xpath
@@ -61,7 +64,7 @@
                 position="attributes">
 
                 <attribute
-                    name="attrs">{'invisible':[('contact_type','=','school')]}
+                    name="attrs">{'invisible':['|',('contact_type','=','school'),('type', '!=', 'contact')]}
                 </attribute>
             </xpath>
 
@@ -87,8 +90,13 @@
                 expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]"
                 position="before">
                 <group>
-                    <field name="contact_type"/>
+                    <field name="contact_type" attrs="{'invisible': [('type', '!=', 'contact')]}"/>
                 </group>
+            </xpath>
+
+            <xpath
+                expr="//field[@name='vat']" position="after">
+                    <field name="contact_type" attrs="{'invisible': [('company_type', '==', 'company')]}"/>
             </xpath>
 
             <!--

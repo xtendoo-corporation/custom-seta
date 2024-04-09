@@ -52,13 +52,15 @@ class ResPartner(models.Model):
     )
     contact_type = fields.Selection(
         selection=[
+            (" "," "),
             ("father", "Father"),
             ("mother", "Mother"),
             ("tutor", "Tutor"),
             ("school", "School"),
+            ("other", "Other"),
         ],
         string="Contact type",
-        default="father",
+        default="",
         required=True,
     )
 

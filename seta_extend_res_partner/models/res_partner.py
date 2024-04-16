@@ -11,7 +11,6 @@ class ResPartner(models.Model):
 
     birth_date = fields.Date(
         string="Birth date",
-        required=True,
     )
     birth_place = fields.Char(
         string="Birth place",
@@ -52,15 +51,14 @@ class ResPartner(models.Model):
     )
     contact_type = fields.Selection(
         selection=[
-            (" "," "),
             ("father", "Father"),
             ("mother", "Mother"),
             ("tutor", "Tutor"),
             ("school", "School"),
-            ("other", "Other"),
+            ("other", ""),
         ],
         string="Contact type",
-        default="",
+        default="other",
         required=True,
     )
 

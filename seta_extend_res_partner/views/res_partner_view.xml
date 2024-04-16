@@ -7,14 +7,14 @@
         <field name="arch" type="xml">
 
             <xpath
-                expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[2]/field[@name='mobile']"
-                position="after">
+                    expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[2]/field[@name='mobile']"
+                    position="after">
                 <field name="company_phone" attrs="{'invisible': [('contact_type','=','school')]}"/>
             </xpath>
 
             <xpath
-                expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']"
-                position="after">
+                    expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']"
+                    position="after">
                 <page name="personal_data" string="Personal data">
                     <group name="personal_data" string="Personal data">
                         <group name="birth_data">
@@ -43,14 +43,14 @@
             </xpath>
 
             <xpath
-                expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[1]/field[@name='function']"
-                position="before">
+                    expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[1]/field[@name='function']"
+                    position="before">
                 <field name="address" class="oe_inline" attrs="{'invisible': [('type', '!=', 'contact') ]}"/>
             </xpath>
 
             <xpath
-                expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[1]/field[@name='function']"
-                position="after">
+                    expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[1]/field[@name='function']"
+                    position="after">
                 <field name="company"
                        attrs="{'invisible': ['|',('contact_type','=','school'),('type', '!=', 'contact')]}"/>
                 <field name="birth_date"
@@ -60,43 +60,45 @@
             </xpath>
 
             <xpath
-                expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[1]/field[@name='function']"
-                position="attributes">
+                    expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[1]/field[@name='function']"
+                    position="attributes">
 
                 <attribute
-                    name="attrs">{'invisible':['|',('contact_type','=','school'),('type', '!=', 'contact')]}
+                        name="attrs">{'invisible':['|',('contact_type','=','school'),('type', '!=', 'contact')]}
                 </attribute>
             </xpath>
 
             <xpath
-                expr="//div[@class='oe_kanban_details']/field[@name='name']"
-                position="before">
+                    expr="//div[@class='oe_kanban_details']/field[@name='name']"
+                    position="before">
                 <!-- <field name="contact_type" widget="badge" decoration-primary="true"/>-->
-                <attribute class="o_tag_color_7 badge rounded-pill o_tag d-inline-flex align-items-center mw-100">
-                    <field name="contact_type" class="o_tag_badge_text"/>
-                </attribute>
+                <!--                <attribute class="o_tag_color_7 badge rounded-pill o_tag d-inline-flex align-items-center mw-100">-->
+                <!--                    <field name="contact_type" class="o_tag_badge_text"/>-->
+                <!--                </attribute>-->
+                <field name="contact_type" class="badge rounded-pill bg-success bg-info text-white fw-bold fs-6"
+                       attrs="{'invisible': ['|',('is_company', '=', True),('contact_type', '=', 'other')]}"/>
                 <br/>
             </xpath>
 
             <xpath
-                expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[1]/field[@name='title']"
-                position="attributes">
+                    expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]/group[1]/field[@name='title']"
+                    position="attributes">
                 <attribute
-                    name="attrs">{'invisible':True}
+                        name="attrs">{'invisible':True}
                 </attribute>
             </xpath>
 
             <xpath
-                expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]"
-                position="before">
+                    expr="//form[1]/sheet[1]/notebook[1]/page[@name='contact_addresses']/field[@name='child_ids']/form[1]/sheet[1]/group[1]"
+                    position="before">
                 <group>
                     <field name="contact_type" attrs="{'invisible': [('type', '!=', 'contact')]}"/>
                 </group>
             </xpath>
 
             <xpath
-                expr="//field[@name='vat']" position="after">
-                    <field name="contact_type" attrs="{'invisible': [('company_type', '==', 'company')]}"/>
+                    expr="//field[@name='vat']" position="after">
+                <field name="contact_type" attrs="{'invisible': [('company_type', '==', 'company')]}"/>
             </xpath>
 
             <!--

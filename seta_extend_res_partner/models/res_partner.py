@@ -72,6 +72,27 @@ class ResPartner(models.Model):
         store=True,
     )
 
+    early_attention = fields.Boolean(
+        string="Early attention",
+        default=False,
+    )
+
+    private = fields.Boolean(
+        string="Private",
+        default=False,
+    )
+
+    contact_sex = fields.Selection(
+        selection=[
+            ("boy", "Boy"),
+            ("girl", "Girl"),
+            ("other", ""),
+        ],
+        string="Contact sex",
+        default="other",
+        required=True,
+    )
+
     @api.depends('birth_date')
     def _calculate_age(self):
         for record in self:

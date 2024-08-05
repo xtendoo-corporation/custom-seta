@@ -20,7 +20,10 @@
                         <group name="birth_data">
                             <field name="birth_date" class="oe_inline"/>
                             <field name="birth_place" class="oe_inline"/>
+                            <field name="contact_sex" class="oe_inline"/>
                             <field name="brothers_number" class="oe_inline"/>
+                            <field name="early_attention" class="oe_inline"/>
+                            <field name="private" class="oe_inline"/>
                         </group>
                         <group name="others_data">
                             <field name="age" class="oe_inline"/>
@@ -101,35 +104,19 @@
                 <field name="contact_type" attrs="{'invisible': [('company_type', '==', 'company')]}"/>
             </xpath>
 
-            <!--
-            <xpath expr="//page[@name='internal_notes']" position="after">
-                <page name="family_information" string="Family information">
+        </field>
+    </record>
 
-                    <group name="father_data" string="Father data">
-                        <field name="father_name" class="oe_inline"/>
-                        <field name="father_birth_date" class="oe_inline"/>
-                        <field name="father_profession" class="oe_inline"/>
-                        <field name="father_company" class="oe_inline"/>
-                        <field name="father_phone" widget="phone" class="oe_inline"/>
-                        <field name="father_company_phone" widget="phone" class="oe_inline"/>
-                    </group>
-
-                    <group name="mother_data" string="Mother data">
-                        <field name="mother_name" class="oe_inline"/>
-                        <field name="mother_birth_date" class="oe_inline"/>
-                        <field name="mother_profession" class="oe_inline"/>
-                        <field name="mother_company" class="oe_inline"/>
-                        <field name="mother_phone" widget="phone" class="oe_inline"/>
-                        <field name="mother_company_phone" widget="phone" class="oe_inline"/>
-                    </group>
-
-                    <group name="extra_data" string="Extra data">
-                        <field name="home_phone" class="oe_inline"/>
-                        <field name="other_phone" class="oe_inline"/>
-                    </group>
-                </page>
+    <record id="res_partner_view_search" model="ir.ui.view">
+        <field name="name">res.partner.search.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="before">
+                <filter string="Early attention" name="early_attention" domain="[('early_attention', '=', True)]"/>
+                <filter string="Private attention" name="private" domain="[('private', '=', True)]"/>
+                <separator/>
             </xpath>
-            -->
         </field>
     </record>
 </odoo>

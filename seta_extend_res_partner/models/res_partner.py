@@ -93,6 +93,26 @@ class ResPartner(models.Model):
         required=True,
     )
 
+    derivation_date = fields.Date(
+        string="Derivation date",
+    )
+
+    derivation_code = fields.Char(
+        string="Derivation code",
+    )
+
+    origin_place = fields.Char(
+        string="Origin place",
+    )
+
+    nuhsa = fields.Char(
+        string="NUHSA",
+    )
+
+    user_state = fields.Char(
+        string="User state",
+    )
+
     @api.depends('birth_date')
     def _calculate_age(self):
         for record in self:

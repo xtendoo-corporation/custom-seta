@@ -23,13 +23,17 @@
                             <field name="contact_sex" class="oe_inline"/>
                             <field name="brothers_number" class="oe_inline"/>
                             <field name="user_state" class="oe_inline"/>
+                            <field name="background" class="oe_inline"/>
+                            <field name="diagnosis" class="oe_inline"/>
+                            <field name="applied_techniques" class="oe_inline"/>
                         </group>
                         <group name="others_data">
                             <field name="age" class="oe_inline"/>
                             <field name="allergies" class="oe_inline"/>
                             <field name="scholarships_and_grants" class="oe_inline"/>
                             <field name="observations" class="oe_inline"/>
-
+                            <field name="result" class="oe_inline"/>
+                            <field name="professional" class="oe_inline"/>
                         </group>
                     </group>
                     <group name="others_datas" string="Otros datos">

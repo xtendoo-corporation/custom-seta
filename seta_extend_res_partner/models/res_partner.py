@@ -113,6 +113,26 @@ class ResPartner(models.Model):
         string="User state",
     )
 
+    background = fields.Char(
+        string="Background",
+    )
+
+    diagnosis = fields.Char(
+        string="Diagnosis",
+    )
+
+    applied_techniques = fields.Char(
+        string="Applied techniques",
+    )
+
+    result = fields.Char(
+        string="Result",
+    )
+
+    professional = fields.Char(
+        string="Professional",
+    )
+
     @api.depends('birth_date')
     def _calculate_age(self):
         for record in self:

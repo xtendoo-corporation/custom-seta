@@ -32,7 +32,7 @@
 
                         </group>
                     </group>
-                    <group name="others_datas" string="Other datas">
+                    <group name="others_datas" string="Otros datos">
                         <group name="type_data">
                             <field name="early_attention" class="oe_inline"/>
                             <field name="private" class="oe_inline"/>

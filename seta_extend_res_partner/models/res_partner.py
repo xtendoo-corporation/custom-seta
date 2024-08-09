@@ -86,6 +86,7 @@ class ResPartner(models.Model):
         selection=[
             ("boy", "Boy"),
             ("girl", "Girl"),
+            ("undefined", "Undefined"),
             ("other", ""),
         ],
         string="Contact sex",
@@ -133,6 +134,11 @@ class ResPartner(models.Model):
         string="Professional",
     )
 
+    medical_diagnostic_id = fields.Many2one(
+        comodel_name="medical.diagnostic",
+        string="Medical diagnostic",
+    )
+
     @api.depends('birth_date')
     def _calculate_age(self):
         for record in self:
@@ -146,3 +152,53 @@ class ResPartner(models.Model):
         res = super().default_get(fields)
         res.update({'type': 'contact'})
         return res
+
+class MedicalDiagnostic(models.Model):
+    _name = 'medical.diagnostic'
+    _inherit = ["mail.thread", "mail.activity.mixin"]
+    _description = "Medical diagnostic"
+
+    res_partner_id = fields.One2many(
+        comodel_name="res.partner",
+        required=True,
+        inverse_name="medical_diagnostic_id",
+    )
+
+    diagnostic_date = fields.Date(
+        string="Derivation date",
+    )
+
+    diagnosis = fields.Char(
+        string="Diagnosis",
+    )
+
+    applied_techniques = fields.Char(
+        string="Applied techniques",
+    )
+
+    result = fields.Char(
+        string="Result",
+    )
+
+    professional = fields.Char(
+        string="Professional",
+    )
+
+    type_medical_diagnostic_id = fields.Many2one(
+        comodel_name="type.medical.diagnostic",
+        string="Type medical diagnostic",
+    )
+
+class TypeMedicalDiagnostic(models.Model):
+    _name = 'type.medical.diagnostic'
+    _description = "Type medical diagnostic"
+
+    medical_diagnostic_id = fields.One2many(
+        comodel_name="medical.diagnostic",
+        required=True,
+        inverse_name="type_medical_diagnostic_id",
+    )
+
+    description = fields.Char(
+        string="description",
+    )

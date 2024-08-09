@@ -1,0 +1,79 @@
+<odoo>
+    <record id="medical_diagnostic_view_form" model="ir.ui.view">
+        <field name="name">medical.diagnostic.form</field>
+        <field name="model">medical.diagnostic</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="diagnostic_date"/>
+                        </group>
+                    </group>
+<!--                    <notebook>-->
+<!--                        <page name="enclosure" string="Enclosure">-->
+<!--                            <field name="enclosure_ids" widget="One2many" context="{'show_attribute': False}">-->
+<!--                                <tree editable="bottom">-->
+<!--                                    <field name="enclosure"/>-->
+<!--                                    <field name="surface" sum="total"/>-->
+<!--                                    <field name="slope"/>-->
+<!--                                    <field name="plot_use_id"/>-->
+<!--                                    <field name="irrigation_coefficient"/>-->
+<!--                                    <field name="region"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+<!--                        </page>-->
+<!--                    </notebook>-->
+                </sheet>
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_view_tree" model="ir.ui.view">
+        <field name="name">medical.diagnostic.view.tree</field>
+        <field name="model">medical.diagnostic</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_view_filter" model="ir.ui.view">
+        <field name="name">medical_diagnostic.view.filter</field>
+        <field name="model">medical.diagnostic</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <search string="Search Diagnostic">
+                <group expand="0" string="Group By">
+                    <filter string="Name" name="name" context="{'group_by': 'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="medical_diagnostic_action"
+            model="ir.actions.act_window">
+        <field name="name">Medical diagnostic</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">medical.diagnostic</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="view_id"
+               ref="medical_diagnostic_view_tree"/>
+        <field name="search_view_id"
+               ref="medical_diagnostic_view_filter"/>
+    </record>
+
+    <menuitem id="medical_diagnostic_menu"
+        name="Medical diagnostic"
+        action="medical_diagnostic_action"
+        parent="contacts.res_partner_menu_config"
+        sequence="3"/>
+
+</odoo>

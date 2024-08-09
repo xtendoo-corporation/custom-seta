@@ -12,6 +12,7 @@
     "data": [
         "views/res_partner_view.xml",
         "views/custom_res_partner_kanban_view.xml",
+        "views/medical_diagnostic.xml",
     ],
     "installable": True,
 }

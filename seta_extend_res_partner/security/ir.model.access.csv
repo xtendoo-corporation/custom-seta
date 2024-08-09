@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+seta_extend_res_partner.access_medical_diagnostic,access_medical_diagnostic,seta_extend_res_partner.model_medical_diagnostic,base.group_user,1,1,1,1
+seta_extend_res_partner.access_type_medical_diagnostic,access_type_medical_diagnostic,seta_extend_res_partner.model_type_medical_diagnostic,base.group_user,1,1,1,1

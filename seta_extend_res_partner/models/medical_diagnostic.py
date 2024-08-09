@@ -1,9 +1,7 @@
 # Copyright (C) 2024 Manuel Calero (<https://xtendoo.es>).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
-import datetime
 
 from odoo import fields, models, api
-from datetime import date
 
 
 class MedicalDiagnostic(models.Model):
@@ -17,33 +15,26 @@ class MedicalDiagnostic(models.Model):
         index=True,
         tracking=True,
     )
-
     res_partner_id = fields.One2many(
         comodel_name="res.partner",
         required=True,
         inverse_name="medical_diagnostic_id",
     )
-
     diagnostic_date = fields.Date(
         string="Derivation date",
     )
-
     diagnosis = fields.Char(
         string="Diagnosis",
     )
-
     applied_techniques = fields.Char(
         string="Applied techniques",
     )
-
     result = fields.Char(
         string="Result",
     )
-
     professional = fields.Char(
         string="Professional",
     )
-
     type_medical_diagnostic_id = fields.Many2one(
         comodel_name="type.medical.diagnostic",
         string="Type medical diagnostic",

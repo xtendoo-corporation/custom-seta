@@ -1,9 +1,7 @@
 # Copyright (C) 2024 Manuel Calero (<https://xtendoo.es>).
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
-import datetime
 
 from odoo import fields, models, api
-from datetime import date
 
 
 class TypeMedicalDiagnostic(models.Model):
@@ -14,9 +12,7 @@ class TypeMedicalDiagnostic(models.Model):
         string="Type diagnostic Name",
         required=True,
         index=True,
-        tracking=True,
     )
-
     medical_diagnostic_id = fields.One2many(
         comodel_name="medical.diagnostic",
         required=True,

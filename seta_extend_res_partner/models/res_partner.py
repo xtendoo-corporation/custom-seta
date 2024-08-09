@@ -61,27 +61,22 @@ class ResPartner(models.Model):
         default="other",
         required=True,
     )
-
     address = fields.Char(
         string="Address"
     )
-
     age = fields.Integer(
         string="Age",
         compute="_calculate_age",
         store=True,
     )
-
     early_attention = fields.Boolean(
         string="Early attention",
         default=False,
     )
-
     private = fields.Boolean(
         string="Private",
         default=False,
     )
-
     contact_sex = fields.Selection(
         selection=[
             ("boy", "Boy"),
@@ -93,47 +88,36 @@ class ResPartner(models.Model):
         default="other",
         required=True,
     )
-
     derivation_date = fields.Date(
         string="Derivation date",
     )
-
     derivation_code = fields.Char(
         string="Derivation code",
     )
-
     origin_place = fields.Char(
         string="Origin place",
     )
-
     nuhsa = fields.Char(
         string="NUHSA",
     )
-
     user_state = fields.Char(
         string="User state",
     )
-
     background = fields.Char(
         string="Background",
     )
-
     diagnosis = fields.Char(
         string="Diagnosis",
     )
-
     applied_techniques = fields.Char(
         string="Applied techniques",
     )
-
     result = fields.Char(
         string="Result",
     )
-
     professional = fields.Char(
         string="Professional",
     )
-
     medical_diagnostic_id = fields.Many2one(
         comodel_name="medical.diagnostic",
         string="Medical diagnostic",
@@ -152,53 +136,3 @@ class ResPartner(models.Model):
         res = super().default_get(fields)
         res.update({'type': 'contact'})
         return res
-
-class MedicalDiagnostic(models.Model):
-    _name = 'medical.diagnostic'
-    _inherit = ["mail.thread", "mail.activity.mixin"]
-    _description = "Medical diagnostic"
-
-    res_partner_id = fields.One2many(
-        comodel_name="res.partner",
-        required=True,
-        inverse_name="medical_diagnostic_id",
-    )
-
-    diagnostic_date = fields.Date(
-        string="Derivation date",
-    )
-
-    diagnosis = fields.Char(
-        string="Diagnosis",
-    )
-
-    applied_techniques = fields.Char(
-        string="Applied techniques",
-    )
-
-    result = fields.Char(
-        string="Result",
-    )
-
-    professional = fields.Char(
-        string="Professional",
-    )
-
-    type_medical_diagnostic_id = fields.Many2one(
-        comodel_name="type.medical.diagnostic",
-        string="Type medical diagnostic",
-    )
-
-class TypeMedicalDiagnostic(models.Model):
-    _name = 'type.medical.diagnostic'
-    _description = "Type medical diagnostic"
-
-    medical_diagnostic_id = fields.One2many(
-        comodel_name="medical.diagnostic",
-        required=True,
-        inverse_name="type_medical_diagnostic_id",
-    )
-
-    description = fields.Char(
-        string="description",
-    )

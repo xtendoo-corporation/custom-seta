@@ -10,6 +10,7 @@
         "contacts",
     ],
     "data": [
+        "security/ir.model.access.csv",
         "views/res_partner_view.xml",
         "views/custom_res_partner_kanban_view.xml",
         "views/medical_diagnostic.xml",

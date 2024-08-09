@@ -70,10 +70,17 @@
                ref="medical_diagnostic_view_filter"/>
     </record>
 
-    <menuitem id="medical_diagnostic_menu"
-        name="Medical diagnostic"
-        action="medical_diagnostic_action"
-        parent="contacts.res_partner_menu_config"
-        sequence="3"/>
+    <record model="ir.ui.menu" id="medical_diagnostic_menu">
+        <field name="name">Medical diagnostic</field>
+        <field name="parent_id" ref="contacts.res_partner_menu_config" />
+        <field name="action" ref="medical_diagnostic_action" />
+        <field name="sequence" eval="90" />
+    </record>
+
+<!--    <menuitem id="medical_diagnostic_menu"-->
+<!--        name="Medical diagnostic"-->
+<!--        action="medical_diagnostic_action"-->
+<!--        parent="contacts.res_partner_menu_config"-->
+<!--        sequence="3"/>-->
 
 </odoo>

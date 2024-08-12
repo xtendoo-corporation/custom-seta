@@ -7,6 +7,7 @@
     "license": "LGPL-3",
     "application": True,
     "depends": [
+        "base",
         "contacts",
     ],
     "data": [
@@ -14,6 +15,7 @@
         "views/res_partner_view.xml",
         "views/custom_res_partner_kanban_view.xml",
         "views/medical_diagnostic.xml",
+        "views/type_medical_diagnostic.xml",
     ],
     "installable": True,
 }

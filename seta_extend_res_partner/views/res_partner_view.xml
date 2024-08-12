@@ -24,18 +24,26 @@
                             <field name="brothers_number" class="oe_inline"/>
                             <field name="user_state" class="oe_inline"/>
                             <field name="background" class="oe_inline"/>
-                            <field name="diagnosis" class="oe_inline"/>
-                            <field name="applied_techniques" class="oe_inline"/>
                         </group>
                         <group name="others_data">
                             <field name="age" class="oe_inline"/>
                             <field name="allergies" class="oe_inline"/>
                             <field name="scholarships_and_grants" class="oe_inline"/>
                             <field name="observations" class="oe_inline"/>
-                            <field name="result" class="oe_inline"/>
-                            <field name="professional" class="oe_inline"/>
                         </group>
                     </group>
+
+                    <group name="medical_diagnostic" string="Medical diagnostic">
+                        <group name="diagnostic">
+                            <field name="medical_diagnostic_ids" widget="Many2one">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="type_medical_diagnostic_id"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </group>
+
                     <group name="others_datas" string="Otros datos">
                         <group name="type_data">
                             <field name="early_attention" class="oe_inline"/>
@@ -90,10 +98,6 @@
             <xpath
                     expr="//div[@class='oe_kanban_details']/field[@name='name']"
                     position="before">
-                <!-- <field name="contact_type" widget="badge" decoration-primary="true"/>-->
-                <!--                <attribute class="o_tag_color_7 badge rounded-pill o_tag d-inline-flex align-items-center mw-100">-->
-                <!--                    <field name="contact_type" class="o_tag_badge_text"/>-->
-                <!--                </attribute>-->
                 <field name="contact_type" class="badge rounded-pill bg-success bg-info text-white fw-bold fs-6"
                        attrs="{'invisible': ['|',('is_company', '=', True),('contact_type', '=', 'other')]}"/>
                 <br/>
@@ -135,4 +139,5 @@
             </xpath>
         </field>
     </record>
+
 </odoo>

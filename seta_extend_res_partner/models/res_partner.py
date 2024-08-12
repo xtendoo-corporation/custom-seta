@@ -106,21 +106,10 @@ class ResPartner(models.Model):
     background = fields.Char(
         string="Background",
     )
-    diagnosis = fields.Char(
-        string="Diagnosis",
-    )
-    applied_techniques = fields.Char(
-        string="Applied techniques",
-    )
-    result = fields.Char(
-        string="Result",
-    )
-    professional = fields.Char(
-        string="Professional",
-    )
-    medical_diagnostic_id = fields.Many2one(
+    medical_diagnostic_ids = fields.One2many(
         comodel_name="medical.diagnostic",
         string="Medical diagnostic",
+        inverse_name="res_partner_id",
     )
 
     @api.depends('birth_date')

@@ -6,6 +6,7 @@ from odoo import fields, models, api
 
 class TypeMedicalDiagnostic(models.Model):
     _name = 'type.medical.diagnostic'
+    _inherit = ["mail.thread", "mail.activity.mixin"]
     _description = "Type medical diagnostic"
 
     name = fields.Char(

@@ -8,29 +8,30 @@
                     <group>
                         <group>
                             <field name="name"/>
-                            <field name="diagnostic_date"/>
+                            <field name="res_partner_id"/>
+                            <field name="type_medical_diagnostic_id"/>
                         </group>
                     </group>
-<!--                    <notebook>-->
-<!--                        <page name="enclosure" string="Enclosure">-->
-<!--                            <field name="enclosure_ids" widget="One2many" context="{'show_attribute': False}">-->
-<!--                                <tree editable="bottom">-->
-<!--                                    <field name="enclosure"/>-->
-<!--                                    <field name="surface" sum="total"/>-->
-<!--                                    <field name="slope"/>-->
-<!--                                    <field name="plot_use_id"/>-->
-<!--                                    <field name="irrigation_coefficient"/>-->
-<!--                                    <field name="region"/>-->
-<!--                                </tree>-->
-<!--                            </field>-->
-<!--                        </page>-->
-<!--                    </notebook>-->
+
+                    <notebook>
+                        <page name="diagnostic" string="Diagnostic">
+                            <group>
+                                <group>
+                                    <field name="diagnostic_date"/>
+                                    <field name="diagnosis"/>
+                                    <field name="applied_techniques"/>
+                                    <field name="result"/>
+                                    <field name="professional"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
-<!--                <div class="oe_chatter">-->
-<!--                    <field name="message_follower_ids"/>-->
-<!--                    <field name="activity_ids"/>-->
-<!--                    <field name="message_ids"/>-->
-<!--                </div>-->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
             </form>
         </field>
     </record>
@@ -41,6 +42,8 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="res_partner_id"/>
+                <field name="type_medical_diagnostic_id"/>
             </tree>
         </field>
     </record>
@@ -77,10 +80,35 @@
         <field name="sequence" eval="90" />
     </record>
 
-<!--    <menuitem id="medical_diagnostic_menu"-->
-<!--        name="Medical diagnostic"-->
-<!--        action="medical_diagnostic_action"-->
-<!--        parent="contacts.res_partner_menu_config"-->
-<!--        sequence="3"/>-->
+    <record model="ir.actions.act_window" id="action_res_partner_diagnostic">
+        <field name="name">Medical diagnostics</field>
+        <field name="res_model">medical.diagnostic</field>
+        <field name="view_mode">tree,form</field>
+<!--        <field name="context">{'default_res_ids': active_ids}</field>-->
+<!--        <field-->
+<!--            name="view_ids"-->
+<!--            eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('medical_diagnostic_view_tree')})]"-->
+<!--        />-->
+<!--        <field name="search_view_id" ref="medical_diagnostic_view_filter" />-->
+<!--        <field name="domain">[('res_partner_id', 'in', active_ids)]</field>-->
+    </record>
+
+    <record model="ir.ui.view" id="res_partner_medical_diagnostic_list_view">
+        <field name="name">res.partner.medical.diagnostic.list.view</field>
+        <field name="model">medical.diagnostic</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    class="oe_stat_button"
+                    string="Medical diagnostic"
+                    name="seta_extend_res_partner.action_res_partner_diagnostic"
+                    type="action"
+                    icon="fa-list"
+                >
+                </button>
+            </xpath>
+        </field>
+    </record>
 
 </odoo>

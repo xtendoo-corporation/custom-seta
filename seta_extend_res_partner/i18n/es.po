@@ -6,14 +6,44 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-06 12:03+0000\n"
-"PO-Revision-Date: 2024-08-06 12:03+0000\n"
+"POT-Creation-Date: 2024-08-12 09:11+0000\n"
+"PO-Revision-Date: 2024-08-12 09:11+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__message_needaction
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__activity_ids
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__activity_exception_decoration
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__activity_state
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__activity_type_icon
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__address
@@ -34,10 +64,15 @@ msgid "Allergies"
 msgstr "Alergias"
 
 #. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__applied_techniques
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__applied_techniques
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__applied_techniques
 msgid "Applied techniques"
-msgstr "Técnicas aplcadas"
+msgstr "Técnica aplicada"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__message_attachment_count
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__background
@@ -98,6 +133,18 @@ msgid "Contact type"
 msgstr "Datos de contacto"
 
 #. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__create_uid
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__create_date
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__derivation_code
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__derivation_code
 msgid "Derivation code"
@@ -110,10 +157,24 @@ msgid "Derivation date"
 msgstr "Fecha derivación"
 
 #. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__diagnosis
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__diagnosis
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__diagnosis
 msgid "Diagnosis"
+msgstr "Diagnosis"
+
+#. module: seta_extend_res_partner
+#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.medical_diagnostic_view_form
+msgid "Diagnostic"
 msgstr "Diagnóstico"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__name
+msgid "Diagnostic Name"
+msgstr "Diagnóstico"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__diagnostic_date
+msgid "Diagnostic date"
+msgstr "Fecha diagnóstico"
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__discapacity
@@ -121,6 +182,12 @@ msgstr "Diagnóstico"
 #: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.res_partner_view_seta_foundation
 msgid "Discapacity"
 msgstr "Discapacidad"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__display_name
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__display_name
+msgid "Display Name"
+msgstr "Descripción"
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__early_attention
@@ -135,6 +202,24 @@ msgid "Father"
 msgstr "Padre"
 
 #. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__message_follower_ids
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__message_partner_ids
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,help:seta_extend_res_partner.field_medical_diagnostic__activity_type_icon
+#: model:ir.model.fields,help:seta_extend_res_partner.field_type_medical_diagnostic__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: seta_extend_res_partner
 #: model:ir.model.fields.selection,name:seta_extend_res_partner.selection__res_partner__contact_sex__girl
 msgid "Girl"
 msgstr "Chica"
@@ -146,10 +231,111 @@ msgid "Grade of discapacity"
 msgstr "Grado de discapacidad"
 
 #. module: seta_extend_res_partner
+#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.medical_diagnostic_view_filter
+#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.type_medical_diagnostic_view_filter
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__has_message
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__has_message
+msgid "Has Message"
+msgstr "Tiene mensaje"
+
+#. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__home_phone
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__home_phone
 msgid "Home phone"
 msgstr "Telefono de casa"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__id
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__id
+msgid "ID"
+msgstr "ID"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__activity_exception_icon
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__activity_exception_icon
+msgid "Icon"
+msgstr "Icono"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,help:seta_extend_res_partner.field_medical_diagnostic__activity_exception_icon
+#: model:ir.model.fields,help:seta_extend_res_partner.field_type_medical_diagnostic__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icono para indicar una actividad de excepción."
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,help:seta_extend_res_partner.field_medical_diagnostic__message_needaction
+#: model:ir.model.fields,help:seta_extend_res_partner.field_type_medical_diagnostic__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, los mensajes nuevos requieren su atención."
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,help:seta_extend_res_partner.field_medical_diagnostic__message_has_error
+#: model:ir.model.fields,help:seta_extend_res_partner.field_medical_diagnostic__message_has_sms_error
+#: model:ir.model.fields,help:seta_extend_res_partner.field_type_medical_diagnostic__message_has_error
+#: model:ir.model.fields,help:seta_extend_res_partner.field_type_medical_diagnostic__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__message_is_follower
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__message_is_follower
+msgid "Is Follower"
+msgstr "Es seguidor"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic____last_update
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic____last_update
+msgid "Last Modified on"
+msgstr "Última modificación"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__write_uid
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__write_date
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__write_date
+msgid "Last Updated on"
+msgstr "Última actualización"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__message_main_attachment_id
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto principal"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__medical_diagnostic_id
+msgid "Medical Diagnostic"
+msgstr "Diagnóstico medico"
+
+#. module: seta_extend_res_partner
+#: model:ir.actions.act_window,name:seta_extend_res_partner.medical_diagnostic_action
+#: model:ir.model,name:seta_extend_res_partner.model_medical_diagnostic
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__medical_diagnostic_ids
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__medical_diagnostic_ids
+#: model:ir.ui.menu,name:seta_extend_res_partner.medical_diagnostic_menu
+#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.res_partner_view_seta_foundation
+msgid "Medical diagnostic"
+msgstr "Diagnóstico medico"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__message_has_error
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de entrega de mensaje"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__message_ids
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__message_ids
+msgid "Messages"
+msgstr "Mensajes"
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields.selection,name:seta_extend_res_partner.selection__res_partner__contact_type__mother
@@ -157,10 +343,70 @@ msgid "Mother"
 msgstr "Madre"
 
 #. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__my_activity_date_deadline
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Fecha límite de mi actividad"
+
+#. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__nuhsa
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__nuhsa
 msgid "NUHSA"
 msgstr "NUHSA"
+
+#. module: seta_extend_res_partner
+#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.medical_diagnostic_view_filter
+#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.type_medical_diagnostic_view_filter
+msgid "Name"
+msgstr "Descripción"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__activity_calendar_event_id
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Próximo evento del calendario de actividades"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__activity_date_deadline
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Fecha límite para la próxima actividad"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__activity_summary
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de la próxima actividad"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__activity_type_id
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__activity_type_id
+msgid "Next Activity Type"
+msgstr "Siguiente tipo de actividad"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__message_needaction_counter
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de acciones"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__message_has_error_counter
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,help:seta_extend_res_partner.field_medical_diagnostic__message_needaction_counter
+#: model:ir.model.fields,help:seta_extend_res_partner.field_type_medical_diagnostic__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensajes que requieren acción"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,help:seta_extend_res_partner.field_medical_diagnostic__message_has_error_counter
+#: model:ir.model.fields,help:seta_extend_res_partner.field_type_medical_diagnostic__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__observations
@@ -177,7 +423,7 @@ msgstr "Lugar de origen"
 #. module: seta_extend_res_partner
 #: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.res_partner_view_seta_foundation
 msgid "Otros datos"
-msgstr ""
+msgstr "Otros datos"
 
 #. module: seta_extend_res_partner
 #: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.res_partner_view_seta_foundation
@@ -196,14 +442,23 @@ msgid "Private attention"
 msgstr "Atención privada"
 
 #. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__professional
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__professional
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__professional
 msgid "Professional"
 msgstr "Profesional"
 
 #. module: seta_extend_res_partner
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__result
-#: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__result
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__res_partner_id
+msgid "Res Partner"
+msgstr "Contacto"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__activity_user_id
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__activity_user_id
+msgid "Responsible User"
+msgstr "Persona responsable"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__result
 msgid "Result"
 msgstr "Resultado"
 
@@ -212,6 +467,12 @@ msgstr "Resultado"
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__ss_number
 msgid "S.S. number"
 msgstr "Numero de la Seguridad social"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__message_has_sms_error
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega de SMS"
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__scholarships_and_grants
@@ -225,15 +486,67 @@ msgid "School"
 msgstr "Colegio"
 
 #. module: seta_extend_res_partner
+#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.medical_diagnostic_view_filter
+#: model_terms:ir.ui.view,arch_db:seta_extend_res_partner.type_medical_diagnostic_view_filter
+msgid "Search Diagnostic"
+msgstr "Diagnóstico de búsqueda"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,help:seta_extend_res_partner.field_medical_diagnostic__activity_state
+#: model:ir.model.fields,help:seta_extend_res_partner.field_type_medical_diagnostic__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: seta_extend_res_partner
 #: model:ir.model.fields.selection,name:seta_extend_res_partner.selection__res_partner__contact_type__tutor
 msgid "Tutor"
 msgstr "Tutor"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__name
+msgid "Type diagnostic Name"
+msgstr "Tipo diagnóstico"
+
+#. module: seta_extend_res_partner
+#: model:ir.actions.act_window,name:seta_extend_res_partner.type_medical_diagnostic_action
+#: model:ir.model,name:seta_extend_res_partner.model_type_medical_diagnostic
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__type_medical_diagnostic_id
+#: model:ir.ui.menu,name:seta_extend_res_partner.type_medical_diagnostic_menu
+msgid "Type medical diagnostic"
+msgstr "Tipo diagnóstico"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,help:seta_extend_res_partner.field_medical_diagnostic__activity_exception_decoration
+#: model:ir.model.fields,help:seta_extend_res_partner.field_type_medical_diagnostic__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipo de actividad de excepción registrada."
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields.selection,name:seta_extend_res_partner.selection__res_partner__contact_sex__undefined
+msgid "Undefined"
+msgstr "No definido"
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__user_state
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_users__user_state
 msgid "User state"
 msgstr "Estado de usuario"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_medical_diagnostic__website_message_ids
+#: model:ir.model.fields,field_description:seta_extend_res_partner.field_type_medical_diagnostic__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes web"
+
+#. module: seta_extend_res_partner
+#: model:ir.model.fields,help:seta_extend_res_partner.field_medical_diagnostic__website_message_ids
+#: model:ir.model.fields,help:seta_extend_res_partner.field_type_medical_diagnostic__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicación del sitio web"
 
 #. module: seta_extend_res_partner
 #: model:ir.model.fields,field_description:seta_extend_res_partner.field_res_partner__name

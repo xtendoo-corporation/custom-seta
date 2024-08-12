@@ -15,13 +15,13 @@ class MedicalDiagnostic(models.Model):
         index=True,
         tracking=True,
     )
-    res_partner_id = fields.One2many(
+    res_partner_id = fields.Many2one(
         comodel_name="res.partner",
         required=True,
-        inverse_name="medical_diagnostic_id",
+        inverse_name="medical_diagnostic_ids",
     )
     diagnostic_date = fields.Date(
-        string="Derivation date",
+        string="Diagnostic date",
     )
     diagnosis = fields.Char(
         string="Diagnosis",

@@ -1,0 +1,65 @@
+<odoo>
+    <record id="type_medical_diagnostic_view_form" model="ir.ui.view">
+        <field name="name">type.medical.diagnostic.form</field>
+        <field name="model">type.medical.diagnostic</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="type_medical_diagnostic_view_tree" model="ir.ui.view">
+        <field name="name">type.medical.diagnostic.view.tree</field>
+        <field name="model">type.medical.diagnostic</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="type_medical_diagnostic_view_filter" model="ir.ui.view">
+        <field name="name">type.medical_diagnostic.view.filter</field>
+        <field name="model">type.medical.diagnostic</field>
+        <field name="priority" eval="1"/>
+        <field name="arch" type="xml">
+            <search string="Search Diagnostic">
+                <group expand="0" string="Group By">
+                    <filter string="Name" name="name" context="{'group_by': 'name'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="type_medical_diagnostic_action"
+            model="ir.actions.act_window">
+        <field name="name">Type medical diagnostic</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">type.medical.diagnostic</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="view_id"
+               ref="type_medical_diagnostic_view_tree"/>
+        <field name="search_view_id"
+               ref="type_medical_diagnostic_view_filter"/>
+    </record>
+
+    <record model="ir.ui.menu" id="type_medical_diagnostic_menu">
+        <field name="name">Type medical diagnostic</field>
+        <field name="parent_id" ref="contacts.res_partner_menu_config" />
+        <field name="action" ref="type_medical_diagnostic_action" />
+        <field name="sequence" eval="91" />
+    </record>
+
+</odoo>

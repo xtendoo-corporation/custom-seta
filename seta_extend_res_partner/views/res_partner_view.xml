@@ -33,17 +33,6 @@
                         </group>
                     </group>
 
-                    <group name="medical_diagnostic" string="Medical diagnostic">
-                        <group name="diagnostic">
-                            <field name="medical_diagnostic_ids" widget="Many2one">
-                                <tree editable="bottom">
-                                    <field name="name"/>
-                                    <field name="type_medical_diagnostic_id"/>
-                                </tree>
-                            </field>
-                        </group>
-                    </group>
-
                     <group name="others_datas" string="Otros datos">
                         <group name="type_data">
                             <field name="early_attention" class="oe_inline"/>

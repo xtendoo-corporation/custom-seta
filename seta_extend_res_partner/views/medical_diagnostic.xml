@@ -7,8 +7,8 @@
                 <sheet>
                     <group>
                         <group>
-                            <field name="name"/>
                             <field name="res_partner_id"/>
+                            <field name="name"/>
                             <field name="type_medical_diagnostic_id"/>
                         </group>
                     </group>
@@ -84,18 +84,19 @@
         <field name="name">Medical diagnostics</field>
         <field name="res_model">medical.diagnostic</field>
         <field name="view_mode">tree,form</field>
-<!--        <field name="context">{'default_res_ids': active_ids}</field>-->
-<!--        <field-->
-<!--            name="view_ids"-->
-<!--            eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('medical_diagnostic_view_tree')})]"-->
-<!--        />-->
-<!--        <field name="search_view_id" ref="medical_diagnostic_view_filter" />-->
-<!--        <field name="domain">[('res_partner_id', 'in', active_ids)]</field>-->
+        <field name="context">{'default_res_ids': active_ids}</field>
+        <field
+            name="view_ids"
+            eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('medical_diagnostic_view_tree')})]"
+        />
+        <field name="search_view_id" ref="medical_diagnostic_view_filter" />
+        <field name="domain">[('res_partner_id', 'in', active_ids)]</field>
     </record>
 
     <record model="ir.ui.view" id="res_partner_medical_diagnostic_list_view">
         <field name="name">res.partner.medical.diagnostic.list.view</field>
-        <field name="model">medical.diagnostic</field>
+        <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">

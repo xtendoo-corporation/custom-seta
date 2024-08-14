@@ -106,6 +106,7 @@
                     name="seta_extend_res_partner.action_res_partner_diagnostic"
                     type="action"
                     icon="fa-list"
+                    context="{'default_res_partner_id': active_id}"
                 >
                 </button>
             </xpath>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="action_contact_group" model="ir.actions.act_window">
+        <field name="name">Groups</field>
+        <field name="res_model">contact.group</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="view_contact_group_form" model="ir.ui.view">
+        <field name="name">contact.group.form</field>
+        <field name="model">contact.group</field>
+        <field name="arch" type="xml">
+            <form string="Contact Group">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="contact_ids" options="{'no_create': True}"
+                               domain="[('is_company', '=', False), ('group_id', '=', False), ('contact_type', '=', 'other')]"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_contact_group_tree" model="ir.ui.view">
+        <field name="name">contact.group.tree</field>
+        <field name="model">contact.group</field>
+        <field name="arch" type="xml">
+            <tree string="Contact Groups">
+                <field name="name"/>
+                <field name="contact_ids" options="{'no_create': True}"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="menu_contact_group" name="Groups"
+              parent="contacts.menu_contacts"
+              action="action_contact_group"
+              sequence="20"/>
+</odoo>

@@ -1,0 +1,173 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* seta_groups_and_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-20 06:29+0000\n"
+"PO-Revision-Date: 2024-09-20 06:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__activity
+msgid "Activity"
+msgstr "Actividad"
+
+#. module: seta_groups_and_attendance
+#: model_terms:ir.ui.view,arch_db:seta_groups_and_attendance.view_attendance_record_calendar
+msgid "Attendance Calendar"
+msgstr "Calendario lista de asistencia"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__attendance_record_line_ids
+msgid "Attendance Lines"
+msgstr "Lineas de asistencia"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model,name:seta_groups_and_attendance.model_attendance_record
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record_line__attendance_record_id
+#: model_terms:ir.ui.view,arch_db:seta_groups_and_attendance.view_attendance_record_form
+msgid "Attendance Record"
+msgstr "Lista de asistencia"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model,name:seta_groups_and_attendance.model_attendance_record_line
+msgid "Attendance Record Line"
+msgstr "Lineas de la lista de asistencia"
+
+#. module: seta_groups_and_attendance
+#: model:ir.actions.act_window,name:seta_groups_and_attendance.action_attendance_record
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_contact_group__attendance_ids
+#: model:ir.ui.menu,name:seta_groups_and_attendance.menu_attendance_record
+#: model_terms:ir.ui.view,arch_db:seta_groups_and_attendance.view_attendance_record_tree
+msgid "Attendance Records"
+msgstr "Lista de asistencia"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__color
+msgid "Color"
+msgstr "Color"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model,name:seta_groups_and_attendance.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: seta_groups_and_attendance
+#: model_terms:ir.ui.view,arch_db:seta_groups_and_attendance.view_contact_group_form
+msgid "Contact Group"
+msgstr "Grupo"
+
+#. module: seta_groups_and_attendance
+#: model_terms:ir.ui.view,arch_db:seta_groups_and_attendance.view_contact_group_tree
+msgid "Contact Groups"
+msgstr "Grupo"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__create_uid
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record_line__create_uid
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_contact_group__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record_line__create_date
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_contact_group__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__create_date
+msgid "Creation Date"
+msgstr "Fecha de creación"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__display_name
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record_line__display_name
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_contact_group__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__group_id
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_res_partner__group_id
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_res_users__group_id
+msgid "Group"
+msgstr "Grupo"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_contact_group__name
+msgid "Group Name"
+msgstr "Nombre del grupo"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model,name:seta_groups_and_attendance.model_contact_group
+msgid "Group of Contacts"
+msgstr "Grupo de los alumnos"
+
+#. module: seta_groups_and_attendance
+#: model:ir.actions.act_window,name:seta_groups_and_attendance.action_contact_group
+#: model:ir.ui.menu,name:seta_groups_and_attendance.menu_contact_group
+msgid "Groups"
+msgstr "Grupos"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__id
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record_line__id
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_contact_group__id
+msgid "ID"
+msgstr ""
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record____last_update
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record_line____last_update
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_contact_group____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificación en"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__write_uid
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record_line__write_uid
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_contact_group__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualización por"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__write_date
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record_line__write_date
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_contact_group__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización en"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record_line__present
+msgid "Present"
+msgstr "Presente"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record_line__student_id
+msgid "Student"
+msgstr "Alumno"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__student_names
+msgid "Student Names"
+msgstr "Nombres de los alumnos"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_contact_group__contact_ids
+#: model_terms:ir.ui.view,arch_db:seta_groups_and_attendance.view_attendance_record_calendar
+msgid "Students"
+msgstr "Alumnos"

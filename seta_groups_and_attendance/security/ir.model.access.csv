@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+seta_groups_and_attendance.access_contact_group,access_contact_group,seta_groups_and_attendance.model_contact_group,base.group_user,1,1,1,1
+seta_groups_and_attendance.access_attendance_record,access.attendance.record,model_attendance_record,base.group_user,1,1,1,1
+seta_groups_and_attendance.access_attendance_record_line,access.attendance.record.line,model_attendance_record_line,base.group_user,1,1,1,1

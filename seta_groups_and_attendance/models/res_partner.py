@@ -7,5 +7,13 @@ from odoo import models, fields
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    group_id = fields.Many2one('contact.group', string='Group')
-
+    # def action_view_attendance_records(self):
+    #     self.ensure_one()
+    #     return {
+    #         'type': 'ir.actions.act_window',
+    #         'name': 'Attendance Records',
+    #         'view_mode': 'tree,form',
+    #         'res_model': 'attendance.record',
+    #         'domain': [('attendance_record_line_ids.student_id', '=', self.id)],
+    #         'context': dict(self._context),
+    #     }

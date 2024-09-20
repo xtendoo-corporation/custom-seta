@@ -86,7 +86,7 @@ msgstr "Creado el"
 #. module: seta_groups_and_attendance
 #: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__create_date
 msgid "Creation Date"
-msgstr "Fecha de creación"
+msgstr "Fecha y hora"
 
 #. module: seta_groups_and_attendance
 #: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__display_name

@@ -9,6 +9,7 @@
     "depends": [
         "base",
         "contacts",
+        "seta_extend_res_partner",
     ],
     "data": [
         "security/ir.model.access.csv",

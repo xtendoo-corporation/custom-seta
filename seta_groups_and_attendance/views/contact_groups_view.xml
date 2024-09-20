@@ -16,7 +16,7 @@
                     <group>
                         <field name="name"/>
                         <field name="contact_ids" options="{'no_create': True}"
-                               domain="[('is_company', '=', False), ('group_id', '=', False), ('contact_type', '=', 'other')]"/>
+                               domain="[('is_company', '=', False), ('group_id', '=', False), ('contact_type', '=', 'student')]"/>
                     </group>
                 </sheet>
             </form>
@@ -38,4 +38,5 @@
               parent="contacts.menu_contacts"
               action="action_contact_group"
               sequence="20"/>
+
 </odoo>

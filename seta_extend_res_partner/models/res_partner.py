@@ -51,6 +51,7 @@ class ResPartner(models.Model):
     )
     contact_type = fields.Selection(
         selection=[
+            ("student", "Student"),
             ("father", "Father"),
             ("mother", "Mother"),
             ("tutor", "Tutor"),
@@ -111,6 +112,8 @@ class ResPartner(models.Model):
         string="Medical diagnostic",
         inverse_name="res_partner_id",
     )
+
+    group_id = fields.Many2one('contact.group', string='Group')
 
     @api.depends('birth_date')
     def _calculate_age(self):

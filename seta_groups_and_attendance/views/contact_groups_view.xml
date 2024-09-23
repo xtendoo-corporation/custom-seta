@@ -39,4 +39,29 @@
               action="action_contact_group"
               sequence="20"/>
 
+    <record id="attendance_record_action_contact_filtered" model="ir.actions.act_window">
+        <field name="name">Asistencias</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">attendance.record</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('attendance_record_line_ids.student_id', '=', active_id)]</field>
+    </record>
+
+    <record id="view_partner_form_inherit_attendance" model="ir.ui.view">
+    <field name="name">res.partner.form.inherit.attendance</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//div[@name='button_box']" position="inside">
+            <button name="seta_groups_and_attendance.attendance_record_action_contact_filtered"
+                    type="action"
+                    class="oe_stat_button"
+                    icon="fa-list"
+                    string="Asistencias">
+                 <field name="attendance_count" widget="statinfo" string="Attendance Records"/>
+            </button>
+        </xpath>
+    </field>
+</record>
+
 </odoo>

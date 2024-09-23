@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-20 06:29+0000\n"
-"PO-Revision-Date: 2024-09-20 06:29+0000\n"
+"POT-Creation-Date: 2024-09-23 06:42+0000\n"
+"PO-Revision-Date: 2024-09-23 06:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,9 +21,21 @@ msgid "Activity"
 msgstr "Actividad"
 
 #. module: seta_groups_and_attendance
+#: model:ir.actions.act_window,name:seta_groups_and_attendance.attendance_record_action_contact_filtered
+#: model_terms:ir.ui.view,arch_db:seta_groups_and_attendance.view_partner_form_inherit_attendance
+msgid "Asistencias"
+msgstr ""
+
+#. module: seta_groups_and_attendance
 #: model_terms:ir.ui.view,arch_db:seta_groups_and_attendance.view_attendance_record_calendar
 msgid "Attendance Calendar"
 msgstr "Calendario lista de asistencia"
+
+#. module: seta_groups_and_attendance
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_res_partner__attendance_count
+#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_res_users__attendance_count
+msgid "Attendance Count"
+msgstr "Nº Asistencias"
 
 #. module: seta_groups_and_attendance
 #: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__attendance_record_line_ids
@@ -47,13 +59,14 @@ msgstr "Lineas de la lista de asistencia"
 #: model:ir.model.fields,field_description:seta_groups_and_attendance.field_contact_group__attendance_ids
 #: model:ir.ui.menu,name:seta_groups_and_attendance.menu_attendance_record
 #: model_terms:ir.ui.view,arch_db:seta_groups_and_attendance.view_attendance_record_tree
+#: model_terms:ir.ui.view,arch_db:seta_groups_and_attendance.view_partner_form_inherit_attendance
 msgid "Attendance Records"
 msgstr "Lista de asistencia"
 
 #. module: seta_groups_and_attendance
 #: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__color
 msgid "Color"
-msgstr "Color"
+msgstr ""
 
 #. module: seta_groups_and_attendance
 #: model:ir.model,name:seta_groups_and_attendance.model_res_partner
@@ -86,7 +99,7 @@ msgstr "Creado el"
 #. module: seta_groups_and_attendance
 #: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__create_date
 msgid "Creation Date"
-msgstr "Fecha y hora"
+msgstr "Fecha de creación"
 
 #. module: seta_groups_and_attendance
 #: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__display_name
@@ -97,8 +110,6 @@ msgstr "Nombre a mostrar"
 
 #. module: seta_groups_and_attendance
 #: model:ir.model.fields,field_description:seta_groups_and_attendance.field_attendance_record__group_id
-#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_res_partner__group_id
-#: model:ir.model.fields,field_description:seta_groups_and_attendance.field_res_users__group_id
 msgid "Group"
 msgstr "Grupo"
 

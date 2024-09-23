@@ -42,9 +42,9 @@
     <record id="attendance_record_action_contact_filtered" model="ir.actions.act_window">
         <field name="name">Asistencias</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">attendance.record</field>
+        <field name="res_model">attendance.record.line</field>
         <field name="view_mode">tree,form</field>
-        <field name="domain">[('attendance_record_line_ids.student_id', '=', active_id)]</field>
+        <field name="domain">[('student_id', '=', active_id)]</field>
     </record>
 
     <record id="view_partner_form_inherit_attendance" model="ir.ui.view">

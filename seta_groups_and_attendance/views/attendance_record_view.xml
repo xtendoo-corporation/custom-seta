@@ -70,8 +70,8 @@
                         <field name="present"/>
                     </group>
                     <group>
-                        <field name="activity" readonly="1"/>
-                        <field name="group_id" readonly="1"/>
+                        <field name="activity" readonly="1" invisible="1"/>
+                        <field name="group_id" readonly="1" invisible="1"/>
                     </group>
                 </sheet>
             </form>
@@ -83,7 +83,7 @@
             <field name="model">attendance.record.line</field>
             <field name="arch" type="xml">
                 <tree string="Attendance Record Lines">
-                    <field name="attendance_record_id"/>
+                    <field name="attendance_record_id" invisible="1"/>
                     <field name="student_id"/>
                     <field name="present"/>
                     <field name="activity"/>

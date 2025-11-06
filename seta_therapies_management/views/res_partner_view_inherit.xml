@@ -1,0 +1,45 @@
+<odoo>
+    <record id="view_partner_form_inherit_therapy" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.therapy</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="is_student" string="Es alumno"/>
+            </xpath>
+            <xpath expr="//form/sheet/div[@name='button_box']" position="inside">
+                <button name="action_ver_saldo" type="object" string="Saldo actual" class="oe_stat_button" icon="fa-money" attrs="{'invisible': [('is_student','=',False)]}">
+                    <field name="saldo_actual" widget="statinfo"/>
+                </button>
+                <button name="action_ver_terapias" type="object" string="Terapias" class="oe_stat_button" icon="fa-heart" attrs="{'invisible': [('is_student','=',False)]}">
+                    <field name="terapia_count" widget="statinfo"/>
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_saldo_modal" model="ir.ui.view">
+        <field name="name">res.partner.saldo.modal</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <form string="Detalle de Saldo" create="false" edit="false">
+                <sheet>
+                    <group>
+                        <field name="saldo_inicial"/>
+                        <field name="saldo_actual" readonly="1"/>
+                        <field name="terapia_ids" readonly="1">
+                            <tree editable="false">
+                                <field name="fecha_terapia"/>
+                                <field name="hora_inicio"/>
+                                <field name="hora_fin"/>
+                                <field name="producto_id"/>
+                                <field name="terapeuta_id"/>
+                                <field name="precio" sum="Total"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,56 @@
+<odoo>
+    <record id="seta_therapies_management_view_therapy_session_tree" model="ir.ui.view">
+        <field name="name">seta_therapies_management.therapy.session.tree</field>
+        <field name="model">therapy.session</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="fecha_terapia"/>
+                <field name="hora_inicio"/>
+                <field name="hora_fin"/>
+                <field name="alumno_id"/>
+                <field name="terapeuta_id"/>
+                <field name="producto_id"/>
+                <field name="iva"/>
+                <field name="precio"/>
+            </tree>
+        </field>
+    </record>
+    <record id="seta_therapies_management_view_therapy_session_form" model="ir.ui.view">
+        <field name="name">seta_therapies_management.therapy.session.form</field>
+        <field name="model">therapy.session</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1 style="color:#3c8dbc;margin-bottom:16px;">Sesión de Terapia</h1>
+                    <div style="display:flex;align-items:center;margin-bottom:24px;gap:24px;">
+                        <div style="flex:1;">
+                            <group>
+                                <field name="alumno_id"/>
+                                <field name="fecha_terapia"/>
+                                <field name="hora_inicio"/>
+                                <field name="hora_fin"/>
+                            </group>
+                        </div>
+                        <div style="flex:1;">
+                            <group>
+                                <field name="terapeuta_id"/>
+                                <field name="producto_id"/>
+                                <field name="iva"/>
+                                <field name="precio"/>
+                            </group>
+                        </div>
+                    </div>
+                    <div style="text-align:left;margin-top:16px;margin-left:450px;">
+                        <button type="object" name="action_clear_fields" string="Vaciar campos" class="btn btn-primary btn-lg" style="background-color:#7C7BAD;border-color:#7C7BAD;color:#fff;border-radius:8px;padding:10px 32px;font-size:1.2rem;box-shadow:0 2px 8px #7C7BAD33;"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="seta_therapies_management_action_therapy_session_tree" model="ir.actions.act_window">
+        <field name="name">Sesiones de Terapia</field>
+        <field name="res_model">therapy.session</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help">Registra y consulta las terapias realizadas.</field>
+    </record>
+</odoo>

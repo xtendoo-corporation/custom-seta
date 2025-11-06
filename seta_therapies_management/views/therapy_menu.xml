@@ -1,0 +1,4 @@
+<odoo>
+    <menuitem id="seta_therapies_management_menu_therapies_root" name="Terapias" sequence="10" web_icon="custom-seta.seta_therapies_management,static/description/icon.svg" action="seta_therapies_management_action_therapy_session_tree"/>
+    <menuitem id="seta_therapies_management_menu_therapy_session" name="Sesiones de Terapia" parent="seta_therapies_management_menu_therapies_root" action="seta_therapies_management_action_therapy_session_tree"/>
+</odoo>

@@ -1,0 +1,19 @@
+<odoo>
+    <!-- Filtro por defecto para mostrar solo compañías en contactos -->
+    <record id="contacts.action_contacts" model="ir.actions.act_window">
+        <field name="context">{'search_default_type_company': 1}</field>
+        <field name="domain">[]</field>
+    </record>
+    <!-- Filtros para tipo de representante legal en la vista de contactos -->
+    <record id="view_partner_filter_inherit_tipo_representante" model="ir.ui.view">
+        <field name="name">res.partner.filter.inherit.tipo_representante</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter" position="inside">
+                <filter name="representante_legal" string="Representantes legales"
+                        domain="[('contact_type', 'in', ['father','mother','tutor'])]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

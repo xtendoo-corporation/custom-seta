@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_therapy_session,therapy.session,model_therapy_session,base.group_user,1,1,1,1
+access_res_partner_therapy,res.partner,base.model_res_partner,base.group_user,1,1,1,1
+access_account_move_line_therapy,account.move.line,account.model_account_move_line,base.group_user,1,1,1,1

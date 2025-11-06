@@ -1,0 +1,39 @@
+<odoo>
+    <record id="seta_therapies_management_view_account_move_form_inherit_therapy" model="ir.ui.view">
+        <field name="name">seta_therapies_management.account.move.form.inherit.therapy</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <!-- Campos fuera de la tabla -->
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="therapy_hora_inicio" string="Hora Inicio" widget="time"/>
+                <field name="therapy_hora_fin" string="Hora Fin" widget="time"/>
+            </xpath>
+            <!-- Eliminar columna subtotal -->
+            <!-- <xpath expr="//form/sheet/notebook/page/field[@name='invoice_line_ids']/tree/field[@name='price_subtotal']" position="replace"/> -->
+            <!-- Eliminar columna precio original para evitar duplicados -->
+            <!-- <xpath expr="//form/sheet/notebook/page/field[@name='invoice_line_ids']/tree/field[@name='price_unit']" position="replace"/> -->
+            <!-- Añadir los campos de terapia después de product_id -->
+            <xpath expr="//form/sheet/notebook/page/field[@name='invoice_line_ids']/tree/field[@name='product_id']" position="after">
+                <field name="therapy_fecha_terapia" string="Fecha"/>
+                <field name="therapy_terapeuta_id" string="Terapeuta"/>
+            </xpath>
+            <!-- Añadir price_unit después de tax_ids -->
+            <xpath expr="//form/sheet/notebook/page/field[@name='invoice_line_ids']/tree/field[@name='tax_ids']" position="after">
+                <field name="price_unit" string="Precio"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="seta_therapies_management_view_account_move_line_form_inherit_therapy" model="ir.ui.view">
+        <field name="name">seta_therapies_management.account.move.line.form.inherit.therapy</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group" position="inside">
+                <field name="therapy_fecha_terapia" string="Fecha"/>
+                <field name="therapy_terapeuta_id" string="Terapeuta"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

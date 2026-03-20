@@ -8,12 +8,26 @@ class ResPartner(models.Model):
 
 
     is_student = fields.Boolean(string='Es alumno')
+
+    # Datos de padres/tutor
+    father_name = fields.Char(string='Nombre del padre')
+    mother_name = fields.Char(string='Nombre de la madre')
+    tutor_name = fields.Char(string='Nombre del tutor')
+    father_phone = fields.Char(string='Teléfono del padre')
+    mother_phone = fields.Char(string='Teléfono de la madre')
+    tutor_phone = fields.Char(string='Teléfono del tutor')
     representante_de = fields.Char(
         string='Representante de',
         compute='_compute_representante_de',
         store=True
     )
     alumno_ids = fields.One2many('res.partner', 'parent_id', string='Alumnos')
+
+    @api.depends('alumno_ids', 'alumno_ids.name', 'alumno_ids.is_student')
+    def _compute_representante_de(self):
+        for partner in self:
+            students = partner.alumno_ids.filtered(lambda p: p.is_student)
+            partner.representante_de = ', '.join(students.mapped('name')) if students else ''
     saldo_inicial = fields.Monetary(
         string='Saldo inicial',
         currency_field='currency_id',

@@ -110,8 +110,8 @@
 
             <xpath
                 expr="//field[@name='vat']" position="after">
-                <field name="contact_type" attrs="{'invisible': [('company_type', '==', 'company')]}"/>
-                <field name="group_id" attrs="{'invisible': [('company_type', '==', 'company')]}"/>
+                <field name="contact_type" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
+                <field name="group_id" attrs="{'invisible': [('company_type', '=', 'company')]}"/>
             </xpath>
         </field>
     </record>

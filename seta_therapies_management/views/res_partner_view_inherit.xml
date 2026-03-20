@@ -7,6 +7,26 @@
             <xpath expr="//field[@name='vat']" position="after">
                 <field name="is_student" string="Es alumno"/>
             </xpath>
+            <xpath expr="//notebook[1]/page[1]" position="after">
+                <page name="parent_data" string="Datos de padres">
+                    <group>
+                        <group string="Padre">
+                            <field name="father_name"/>
+                            <field name="father_phone"/>
+                        </group>
+                        <group string="Madre">
+                            <field name="mother_name"/>
+                            <field name="mother_phone"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Tutor">
+                            <field name="tutor_name"/>
+                            <field name="tutor_phone"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
             <xpath expr="//form/sheet/div[@name='button_box']" position="inside">
                 <button name="action_ver_saldo" type="object" string="Saldo actual" class="oe_stat_button" icon="fa-money" attrs="{'invisible': [('is_student','=',False)]}">
                     <field name="saldo_actual" widget="statinfo"/>

@@ -113,7 +113,7 @@ class ResPartner(models.Model):
         inverse_name="res_partner_id",
     )
 
-    group_id = fields.Many2one('contact.group', string='Group')
+    group_id = fields.Many2one("res.partner.category", string="Group")
 
     @api.depends('birth_date')
     def _calculate_age(self):
